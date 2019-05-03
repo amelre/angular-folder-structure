@@ -1,50 +1,32 @@
 
-# Shared
-
-All the shared-components are included here.
+# PIPES
 
 
-## What is considered a shared-component?
+All the *pipes* are included here.
+A  **pipe** is a way to write display-value transformations that you can declare in your HTML.
 
-
-For the logic of this structure, we call  **shared**  a part of a view that is displayed in a page and it's more specific than a component but it's not have a route.
-
-### Examples
-
-* Headers
-* Navbar of the website
-* Footer
-
-
-> Remember that a shared is a component with a specific functionality. They don't need Inputs or Outputs.
-
-## How can I create a shared?
-
-We create a shared like a component.
+## How is it created?
 In our console we use the next command (on the app folder)
 
 ```bash
-ng generate component sharedName
+ng generate pipe pipeName
 ```
 
-  
 See the [Angular CLI Documentation ](https://angular.io/cli/generate) for more information.
 
 
 ### Next Steps...
 
+ 
 If everything went well we have the next structure
 
 ```$ tree
-├── shared
-│ └── shared-name
-| ├── shared-name.html
-| ├── shared-name.ts
-| ├── shared-name.css
-│ └── shared-name.spec
+├── pipes
+│ └── pipe-name.ts
 ```
 
-## Shared Module
+## Pipes Module
 
-The shared contain a module which help us to organize.
-When creating pipes, they must be imported in this module **NOT IN THE MAIN** because this module is the **ONLY** that is imported in the main module, this is the way they communicate.
+The pipes contain a module which help us to organize.
+
+When creating pipes, they must be imported in this module **NOT IN THE MAIN**  because this module is the **ONLY**  that is imported in the main module, this is the way they communicate.
